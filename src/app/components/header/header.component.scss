@@ -1,0 +1,12 @@
+@use "sass:map";
+@import '~@angular/material/theming';
+
+@include mat-core();
+// @debug map.get($mat-purple, 700);
+
+h1 {
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: map.get($mat-green, 700);
+}

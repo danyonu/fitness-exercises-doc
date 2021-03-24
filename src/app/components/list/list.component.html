@@ -1,0 +1,5 @@
+<div class="list">
+    <div class="list-item" *ngFor="let item of list | async">
+        <a mat-raised-button color="primary" [routerLink]="[path, item.id]">{{item.name}}</a>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+.list {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
+	&-item {
+		display: flex;
+		flex-direction: column;
+		max-width: 300px;
+		width: 100%;
+
+		button {
+			margin: 10px;
+			height: 100px;
+			font-size: 20px;
+		}
+	}
+}

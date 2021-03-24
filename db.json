@@ -1,0 +1,73 @@
+{
+	"training": {
+		"1": { "path": "abs-and-booty", "name": "Abs and booty" },
+		"2": { "path": "kickbox", "name": "Kickbox" }
+	},
+	"trainingGroup": {
+		"1": { "training": 1, "exerciseGroup": [ 1, 2, 3, 4 ], "reps": 3 },
+		"2": { "training": 1, "exerciseGroup": [ 1, 2, 3, 4 ], "reps": 3 }
+	},
+	"exerciseGroup": {
+		"1": { "id": 1, "name": "Faza 1" },
+		"2": { "id": 2, "name": "Faza 2" },
+		"3": { "id": 3, "name": "Faza 3" },
+		"4": { "id": 4, "name": "Faza 4" },
+		"5": { "id": 5, "name": "Faza 5" }
+	},
+	"exercises": {
+		"1": {
+			"name": "Step up + genuflexiune",
+			"reps": "12",
+			"videoUrl": [ "https://youtu.be/2QUikXelAME" ],
+			"imageUrl": "",
+			"training": 1,
+			"trainingGroup": 1,
+			"exerciseGroup": 1
+		},
+		"2": {
+			"name": "Plank lasi piciorul pe minge",
+			"reps": "20 pe fiecare picior",
+			"videoUrl": [ "https://youtu.be/7f_htgPOAYQ" ],
+			"imageUrl": "",
+			"training": 1,
+			"trainingGroup": 1,
+			"exerciseGroup": 1
+		},
+		"3": {
+			"name": "Fandare in spate + one leg dead lift (cu gantera)",
+			"reps": "12 pe fiecare picior",
+			"videoUrl": [ "https://youtu.be/i3uuokFXCwI" ],
+			"imageUrl": "",
+			"training": 1,
+			"trainingGroup": 1,
+			"exerciseGroup": 2
+		},
+		"4": {
+			"name": "Plank jacks + plank reach double",
+			"reps": "20",
+			"videoUrl": [ "https://youtu.be/xcBz0TtHqWI", "https://youtu.be/Ahn6Ar0T9BU" ],
+			"imageUrl": "",
+			"training": 1,
+			"trainingGroup": 1,
+			"exerciseGroup": 2
+		},
+		"5": {
+			"name": "Picior in lateral cu elastic",
+			"reps": "30 cu fiecare picior",
+			"videoUrl": [ "https://youtu.be/i3uuokFXCwI" ],
+			"imageUrl": "",
+			"training": 1,
+			"trainingGroup": 1,
+			"exerciseGroup": 3
+		},
+		"6": {
+			"name": "Side plank si reach cu gantera",
+			"reps": "20",
+			"videoUrl": [ "https://youtu.be/-ruAdV34H54" ],
+			"imageUrl": "",
+			"training": 1,
+			"trainingGroup": 1,
+			"exerciseGroup": 3
+		}
+	}
+}

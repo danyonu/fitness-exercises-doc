@@ -1,0 +1,5 @@
+<app-header [title]="title"></app-header>
+<div class="exercise-faze-container" *ngFor="let faze of [{name: 'ass1'}]">
+    <h1 class="faze-title">{{faze.name}}</h1>
+    <a mat-raised-button color="primary" [routerLink]="[]"></a>
+</div>
