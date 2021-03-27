@@ -1,5 +1,18 @@
-<app-header [title]="title"></app-header>
-<div class="exercise-faze-container" *ngFor="let faze of [{name: 'ass1'}]">
-    <h1 class="faze-title">{{faze.name}}</h1>
-    <a mat-raised-button color="primary" [routerLink]="[]"></a>
+<app-header [title]="title | async"></app-header>
+<div class="exercise-container" *ngIf="fazesWithExercises | async as fazes; else noResults">
+    <div class="exercise-faze-container" *ngFor="let faze of fazes">
+        <p class="faze-title">{{faze.name}}</p>
+        <p class="faze-reps">(Repeta exercitiile de <span>{{faze.reps}})</span></p>
+        <a mat-raised-button
+            class="exercise-btn" 
+            color="primary"
+            (click)="openDialog(exercise)" 
+            *ngFor="let exercise of faze.exercises">
+            <p>{{exercise.name}}</p>
+            <div class="exercise-reps">(Repetari: {{exercise.reps}})</div>
+        </a>
+    </div>
 </div>
+<ng-template #noResults>
+    <div>No results!</div>
+</ng-template>

@@ -23,11 +23,10 @@ export class WorkoutListComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.currentId = this.route.snapshot.paramMap.get('id');
     this.workouts$ = this.fetchDataService.getWorkouts().pipe(
-      map(item => item.filter(item => item.workoutTypeId === this.currentId)),
-      tap(console.log)
+      map(item => item.filter(item => item.workoutTypeId === this.currentId))
     );
 
-    this.currentWorkoutType = this.fetchDataService.getWorkoutTypeForId(this.currentId)
+    this.currentWorkoutType = this.fetchDataService.getWorkoutTypeById(this.currentId)
       .subscribe(item => {
         this.title = item.name;
     });

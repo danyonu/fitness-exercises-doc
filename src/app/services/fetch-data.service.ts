@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
-import { Observable } from 'rxjs';
-import { WorkoutFaze, Workouts } from '../interfaces/workouts';
-import { Exercises } from '../interfaces/exercises';
+import { combineLatest, Observable } from 'rxjs';
+import { WorkoutFaze, WorkoutFazeWithExercises, Workouts } from '../interfaces/workouts';
+import { Exercise } from '../interfaces/exercise';
 import { WorkoutType } from '../interfaces/workout-type';
 import { filter, map, tap } from 'rxjs/operators';
 
@@ -17,7 +17,7 @@ export class FetchDataService {
     return this.db.list<WorkoutType>('workoutType').valueChanges();
   }
 
-  getWorkoutTypeForId(id: string): Observable<WorkoutType> {
+  getWorkoutTypeById(id: string): Observable<WorkoutType> {
     return this.db.list<WorkoutType>('workoutType').valueChanges().pipe(
       map(array => array.filter(item => item.id === id)),
       map(item => item[0])
@@ -28,22 +28,46 @@ export class FetchDataService {
     return this.db.list<Workouts>('workouts').valueChanges();
   }
 
-  getWorkoutForId(id: string): Observable<Workouts> {
+  getWorkoutById(id: string): Observable<Workouts> {
     return this.db.list<Workouts>('workouts').valueChanges().pipe(
-      map(array => array.filter(item => item.id === id)),
-      map(item => item[0])
+      map(array => array.filter(item => item.id === id)[0])
     );
   }
 
-  getWorkoutFazeForId(id: string): Observable<WorkoutFaze[]> {
+  getWorkoutFazeByWorkoutId(id: string): Observable<WorkoutFaze[]> {
     return this.db.list<Workouts>('workouts').valueChanges().pipe(
-      map(array => array.filter(item => item.id === id)),
-      map(item => item[0].workoutFaze)
+      map(array => array.filter(item => item.id === id)[0].workoutFaze)
     );
   }
 
-  getExercises(): Observable<Exercises[]> {
-    return this.db.list<Exercises>('exercises').valueChanges();
+  getExercises(): Observable<Exercise[]> {
+    return this.db.list<Exercise>('exercises').valueChanges();
+  }
+
+  getExerciseById(id: string): Observable<Exercise> {
+    return this.db.list<Exercise>('exercises').valueChanges().pipe(
+      map(array => array.filter(item => item.id === id)[0]),
+      tap(console.log)
+    );
+  }
+
+  getWorkoutFazesWithExercises(id: string): Observable<WorkoutFazeWithExercises[]> {
+    return combineLatest([this.getExercises(), this.getWorkoutFazeByWorkoutId(id)]).pipe(
+      map(arr => {
+        let exercises: Exercise[] = arr[0] || [];
+        let workoutFaze: WorkoutFaze[] = arr[1] || [];
+
+        return workoutFaze.map(faze => {
+          return {
+            id: faze.id,
+            name: faze.name,
+            reps: faze.reps,
+            exercises: exercises.filter(ex => ex.workoutFazeIds.includes(faze.id))
+          }
+        });
+      }),
+      tap(console.log)
+    );
   }
 
   temp() {

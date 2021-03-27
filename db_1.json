@@ -11,19 +11,22 @@
 			"workoutTypeId": "1",
 			"workoutFaze": [
 				{
+					"id": "1",
 					"name": "Faza 1",
 					"reps": 2,
-					"exerciseIds": [ 1, 2 ]
+					"exerciseIds": [ "1", "2" ]
 				},
 				{
+					"id": "2",
 					"name": "Faza 2",
 					"reps": 2,
-					"exerciseIds": [ 3, 4 ]
+					"exerciseIds": [ "3", "4" ]
 				},
 				{
+					"id": "3",
 					"name": "Faza 3",
 					"reps": 2,
-					"exerciseIds": [ 5, 6 ]
+					"exerciseIds": [ "5", "6" ]
 				}
 			]
 		},
@@ -45,49 +48,49 @@
 			"id": "1",
 			"name": "Step up + genuflexiune",
 			"reps": "12",
-			"videoUrl": [ "https://youtu.be/2QUikXelAME" ],
+			"videoId": [ "2QUikXelAME" ],
 			"imageUrl": "",
-			"workoutFazeId": 1
+			"workoutFazeIds": ["1"]
 		},
 		{
 			"id": "2",
 			"name": "Plank lasi piciorul pe minge",
 			"reps": "20 pe fiecare picior",
-			"videoUrl": [ "https://youtu.be/7f_htgPOAYQ" ],
+			"videoId": [ "7f_htgPOAYQ" ],
 			"imageUrl": "",
-			"workoutFazeId": 1
+			"workoutFazeIds": ["1"]
 		},
 		{
 			"id": "3",
 			"name": "Fandare in spate + one leg dead lift (cu gantera)",
 			"reps": "12 pe fiecare picior",
-			"videoUrl": [ "https://youtu.be/i3uuokFXCwI" ],
+			"videoId": [ "i3uuokFXCwI" ],
 			"imageUrl": "",
-			"workoutFazeId": 2
+			"workoutFazeIds": ["2"]
 		},
 		{
 			"id": "4",
 			"name": "Plank jacks + plank reach double",
 			"reps": "20",
-			"videoUrl": [ "https://youtu.be/xcBz0TtHqWI", "https://youtu.be/Ahn6Ar0T9BU" ],
+			"videoId": [ "xcBz0TtHqWI", "Ahn6Ar0T9BU" ],
 			"imageUrl": "",
-			"workoutFazeId": 2
+			"workoutFazeIds": ["2"]
 		},
 		{
 			"id": "5",
 			"name": "Picior in lateral cu elastic",
 			"reps": "30 cu fiecare picior",
-			"videoUrl": [ "https://youtu.be/i3uuokFXCwI" ],
+			"videoId": [ "i3uuokFXCwI" ],
 			"imageUrl": "",
-			"workoutFazeId": 3
+			"workoutFazeIds": ["3"]
 		},
 		{
 			"id": "6",
 			"name": "Side plank si reach cu gantera",
 			"reps": "20",
-			"videoUrl": [ "https://youtu.be/-ruAdV34H54" ],
+			"videoId": [ "-ruAdV34H54" ],
 			"imageUrl": "",
-			"workoutFazeId": 3
+			"workoutFazeIds": ["3"]
 		}
 	]
 }
