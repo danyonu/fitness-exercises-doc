@@ -11,15 +11,18 @@ export const routes: Routes = [
     },
     {
         path: 'workout-type',
-        component: WorkoutTypeComponent
+        component: WorkoutTypeComponent,
+        data: { animation: 'WorkoutTypePage' }
     },
     {
         path: 'workouts/:id',
-        component: WorkoutListComponent
+        component: WorkoutListComponent,
+        data: { animation: 'WorkoutsPage' }
     },
     {
         path: 'exercises/:id',
-        component: ExerciseListComponent
+        component: ExerciseListComponent,
+        data: { animation: 'ExercisesPage' }
     },
     {
         path: '**',
