@@ -11,7 +11,7 @@ import { FetchDataService } from 'src/app/services/fetch-data.service';
 export class WorkoutTypeComponent implements OnInit {
   workoutType$: Observable<WorkoutType[]>;
   nextPath = '/workouts';
-  title = 'Workout Type';
+  title = 'Workout Types';
 
   constructor(
     private fetchDataService: FetchDataService,
@@ -19,6 +19,5 @@ export class WorkoutTypeComponent implements OnInit {
 
   ngOnInit(): void {
     this.workoutType$ = this.fetchDataService.getWorkoutTypes();
-    // this.workoutType$.subscribe(console.log)
   }
 }

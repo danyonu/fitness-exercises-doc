@@ -8,14 +8,11 @@ import { slideInAnimation } from './animations/slide-in';
   styleUrls: ['./app.component.scss'],
   animations: [
     slideInAnimation
-    // animation triggers go here
   ]
 })
 export class AppComponent {
   
   prepareRoute(outlet: RouterOutlet) {
-    const a = outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation;
-    console.log(a);
-    return a
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation;
   }
 }

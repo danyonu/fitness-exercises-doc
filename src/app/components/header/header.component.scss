@@ -3,18 +3,29 @@
 
 @include mat-core();
 // @debug map.get($mat-purple, 700);
-
-.header-container {
+.wrapper {
 	height: 71px;
 
-	h1 {
-		text-align: center;
-		padding-top: 20px;
-		padding-bottom: 20px;
+	.header {
+		padding: 10px 0px;
 		background-color: map.get($mat-green, 700);
-		position: fixed;
 		width: 100%;
 		z-index: 100;
+		display: flex;
+	 	position: fixed;
+		align-items: center;
+
+		&-back-button, &-menu-button  {
+			margin-left: 10px;
+		}
+
+		&-title {
+			text-align: center;
+			font-size: 24px;
+			padding-left: 30px;
+			padding-right: 10px;
+		}
 	}
 }
+
 

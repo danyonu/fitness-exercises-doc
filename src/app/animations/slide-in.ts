@@ -2,10 +2,8 @@ import { animate, animateChild, group, query, style, transition, trigger } from 
 
 export const slideInAnimation =
   trigger('routeAnimations', [
-    transition('WorkoutTypePage <=> WorkoutsPage',  slideTo('left')),
-    // transition('WorkoutsPage <=> ExercisesPage', slideTo('left')),
-    // transition('ExercisesPage <=> WorkoutsPage', slideTo('right')),
-    transition('WorkoutsPage <=> WorkoutTypePage', slideTo('right'))
+    transition('WorkoutTypesPage => WorkoutsPage, WorkoutsPage => ExercisesPage',  slideTo('left')),
+    transition('ExercisesPage => WorkoutsPage, WorkoutsPage => WorkoutTypesPage',  slideTo('right'))
   ]);
 
   function slideTo(direction: string) {
