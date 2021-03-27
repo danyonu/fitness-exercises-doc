@@ -1,3 +1,12 @@
-<div class="header-container">
-    <h1>{{title}}</h1>
+<div class="wrapper">
+    <div class="header">
+        <button mat-fab color="basic" class="header-back-button" (click)="goBack()" *ngIf="showBackBtn">
+            <mat-icon aria-hidden="false" aria-label="Back button">arrow_back</mat-icon>
+        </button>
+        <button mat-fab color="basic" class="header-menu-button" (click)="openMenu()" *ngIf="showMenu">
+            <mat-icon aria-hidden="false" aria-label="Menu">menu</mat-icon>
+        </button>
+        <span class="header-title">{{title}}</span>
+    </div>
 </div>
+

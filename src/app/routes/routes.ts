@@ -6,23 +6,28 @@ import { WorkoutTypeComponent } from "../components/workout-type/workout-type.co
 export const routes: Routes = [
     {
         path: '', 
-        redirectTo: 'workout-type', 
-        pathMatch: 'full'
+        redirectTo: 'workout-types', 
+        pathMatch: 'full',
+        data: { animation: 'WorkoutsPage' }
     },
     {
-        path: 'workout-type',
-        component: WorkoutTypeComponent
+        path: 'workout-types',
+        component: WorkoutTypeComponent,
+        data: { animation: 'WorkoutTypesPage' }
     },
     {
         path: 'workouts/:id',
-        component: WorkoutListComponent
+        component: WorkoutListComponent,
+        data: { animation: 'WorkoutsPage' }
     },
     {
         path: 'exercises/:id',
-        component: ExerciseListComponent
+        component: ExerciseListComponent,
+        data: { animation: 'ExercisesPage' }
     },
     {
         path: '**',
-        component: WorkoutTypeComponent
+        component: WorkoutTypeComponent,
+        data: { animation: 'WorkoutsPage' }
     }
 ]

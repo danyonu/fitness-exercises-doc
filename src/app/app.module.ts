@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 
@@ -35,6 +37,8 @@ import { YouTubePlayerModule } from "@angular/youtube-player";
     BrowserModule,
     MatButtonModule,
     MatDialogModule,
+    MatIconModule,
+    MatToolbarModule,
     RouterModule.forRoot(routes),
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
