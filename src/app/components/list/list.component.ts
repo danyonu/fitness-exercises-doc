@@ -14,7 +14,5 @@ export class ListComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-    // this.list.subscribe(console.log);
-  }
+  ngOnInit(): void { }
 }

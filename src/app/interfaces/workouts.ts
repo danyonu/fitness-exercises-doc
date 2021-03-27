@@ -1,3 +1,5 @@
+import { Exercise } from "./exercise";
+
 export interface Workouts {
     id: string;
     name: string;
@@ -6,7 +8,15 @@ export interface Workouts {
 }
 
 export interface WorkoutFaze {
-    exerciseIds: string[];
+    id: string;
     name: string;
     reps: number
+    exerciseIds: string[];
+}
+
+export interface WorkoutFazeWithExercises {
+    id: string;
+    name: string;
+    reps: number
+    exercises: Exercise[];
 }

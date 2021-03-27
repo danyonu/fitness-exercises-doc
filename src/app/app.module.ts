@@ -2,7 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 
@@ -15,6 +16,9 @@ import { WorkoutListComponent } from './components/workout-list/workout-list.com
 import { ListComponent } from './components/list/list.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ExerciseListComponent } from './components/exercise-list/exercise-list.component';
+import { ExerciseDetailsComponent } from './components/exercise-details/exercise-details.component';
+import { SanitizeUrlPipe } from './pipes/sanitize-url.pipe';
+import { YouTubePlayerModule } from "@angular/youtube-player";
 
 @NgModule({
   declarations: [
@@ -23,15 +27,19 @@ import { ExerciseListComponent } from './components/exercise-list/exercise-list.
     WorkoutListComponent,
     ListComponent,
     HeaderComponent,
-    ExerciseListComponent
+    ExerciseListComponent,
+    ExerciseDetailsComponent,
+    SanitizeUrlPipe
   ],
   imports: [
     BrowserModule,
     MatButtonModule,
+    MatDialogModule,
+    RouterModule.forRoot(routes),
+    BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
-    BrowserAnimationsModule,
-    RouterModule.forRoot(routes)
+    YouTubePlayerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

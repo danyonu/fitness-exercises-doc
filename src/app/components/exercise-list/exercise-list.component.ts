@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
-import { combineLatest, Observable } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
-import { Exercises } from 'src/app/interfaces/exercises';
-import { Workouts } from 'src/app/interfaces/workouts';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { Exercise } from 'src/app/interfaces/exercise';
+import { WorkoutFazeWithExercises } from 'src/app/interfaces/workouts';
 import { FetchDataService } from 'src/app/services/fetch-data.service';
+import { ExerciseDetailsComponent } from '../exercise-details/exercise-details.component';
 
 @Component({
   selector: 'app-exercise-list',
@@ -12,52 +14,36 @@ import { FetchDataService } from 'src/app/services/fetch-data.service';
   styleUrls: ['./exercise-list.component.scss']
 })
 export class ExerciseListComponent implements OnInit {
-  title: string;
+  title: Observable<string>;
   nextPath = '';
-  exercises: Exercises[];
-  // exercises = [{id:'1'}, {id:'2'}, {id:'3'}, {id:'4'}];
   currentId: string;
-  workoutFazes;
-  fazesWithExercises;
-  fazesAndExercises
+  fazesWithExercises: Observable<WorkoutFazeWithExercises[]>;
 
-  constructor(private route: ActivatedRoute, private fetchDataService: FetchDataService) { }
+  constructor(
+    private route: ActivatedRoute, 
+    private fetchDataService: FetchDataService,
+    public dialog: MatDialog
+    ) { }
 
   ngOnInit(): void {
     this.currentId = this.route.snapshot.paramMap.get('id');
+    this.fazesWithExercises = this.fetchDataService.getWorkoutFazesWithExercises(this.currentId);
 
-    combineLatest([this.fetchDataService.getExercises(), this.fetchDataService.getWorkoutFazeForId(this.currentId)]).pipe(
-      map(arr => arr),
-      tap(console.log)
-    ).subscribe();
-    
-    this.fetchDataService.getExercises().subscribe(item => this.exercises = item);
-
-    // this.fetchDataService.getWorkoutForId(this.currentId).subscribe(item => {
-    //   this.title = item.name;
-      
-    //   this.fazesWithExercises = item.workoutFaze.map((faze) => {
-    //     let exercisesArr;
-
-    //     exercisesArr = faze.exerciseIds.map((exId, i, arr) => {
-    //       return this.exercises.filter(ex => ex.id == exId)[0];
-    //     });
-
-    //     return { 
-    //       name: faze.name,
-    //       reps: faze.reps,
-    //       exercises: exercisesArr
-    //     }
-    //   });
-
-    //   // console.log(this.fazesWithExercises);
-    // });
+    this.title = this.fetchDataService.getWorkoutById(this.currentId).pipe(
+      map(workout => workout.name)
+    );
   }
 
-  filterExerciseForFaze(exercisesArr) {
-    
-    console.log(exercisesArr);
-    let arr1 = [1,2,3,4,5,6];
-    let arr2 = [1,2,3];
+  openDialog(exercise: Exercise) {
+    console.log(exercise);
+    this.dialog.open(
+      ExerciseDetailsComponent, 
+      {
+        data:  exercise, 
+        width: '95%', 
+        maxWidth: '650px',
+        panelClass: 'custom-dialog-container'
+      }
+    );
   }
 }
