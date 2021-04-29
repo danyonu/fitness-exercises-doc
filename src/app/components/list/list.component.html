@@ -1,5 +1,16 @@
-<div class="list">
-    <div class="list-item" *ngFor="let item of list | async">
-        <a mat-raised-button color="primary" [routerLink]="[path, item.id]">{{item.name}}</a>
-    </div>
+<div class="list" *ngIf="list | async as itemList; else noResults">
+	<div class="list-item" *ngFor="let item of itemList">
+		<a mat-raised-button color="primary" [routerLink]="[path, item.id]">
+			{{ item.name }}
+			<mat-icon
+				class="done-icon"
+				*ngIf="showDoneIcon && (item.workoutFaze | keyvalue)?.length == item[completedItemsCount]"
+				>military_tech</mat-icon
+			>
+			<div class="details" *ngIf="showDetails">{{ item[itemsCountPropName] }} / {{ item[completedItemsCount] }}</div>
+		</a>
+	</div>
 </div>
+<ng-template #noResults>
+	<app-spinner></app-spinner>
+</ng-template>

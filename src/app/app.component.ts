@@ -1,18 +1,19 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { slideInAnimation } from './animations/slide-in';
+import { Component } from "@angular/core";
+import { RouterOutlet } from "@angular/router";
+import { slideInAnimation } from "./animations/slide-in";
+import { LoginService } from "./services/login.service";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  animations: [
-    slideInAnimation
-  ]
+	selector: "app-root",
+	templateUrl: "./app.component.html",
+	styleUrls: ["./app.component.scss"],
+	animations: [slideInAnimation],
 })
 export class AppComponent {
-  
-  prepareRoute(outlet: RouterOutlet) {
-    return outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation;
-  }
+	// initialize login service here to login user automatically if in localStorage
+	constructor(private loginService: LoginService) {}
+
+	prepareRoute(outlet: RouterOutlet) {
+		return outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation;
+	}
 }

@@ -1,5 +1,5 @@
 @use "sass:map";
-@import '~@angular/material/theming';
+@import "~@angular/material/theming";
 
 @include mat-core();
 // @debug map.get($mat-purple, 700);
@@ -16,10 +16,28 @@
 		max-width: 300px;
 		width: 100%;
 
+		&::ng-deep .mat-button-wrapper {
+			width: 100%;
+		}
+
 		a {
 			margin: 10px;
 			height: 100px;
 			font-size: 20px;
+			white-space: normal;
+			line-height: 26px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.done-icon {
+			position: absolute;
+			right: 5px;
+			top: 5px;
+			width: 33px;
+			height: 37px;
+			font-size: 36px;
 		}
 	}
 }

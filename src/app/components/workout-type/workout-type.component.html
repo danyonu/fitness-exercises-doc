@@ -1,2 +1,8 @@
 <app-header [title]="title" [showMenu]="true"></app-header>
-<app-list [list]="workoutType$" [path]="nextPath"></app-list>
+<app-list
+	[list]="workoutType$"
+	[path]="nextPath"
+	[itemsCountPropName]="'workoutCount'"
+	[completedItemsCount]="'workoutsCompleted'"
+	[showDetails]="!!currentUser"
+></app-list>

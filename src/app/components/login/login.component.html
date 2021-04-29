@@ -1,0 +1,11 @@
+<mat-form-field>
+	<mat-label>Who are you?</mat-label>
+	<input matInput placeholder="name" [formControl]="name" required />
+	<mat-error *ngIf="name.invalid && (name.dirty || name.touched)"
+		>Tell me who you are and I tell you your progress</mat-error
+	>
+</mat-form-field>
+<div>
+	<button mat-raised-button (click)="onLogin(name.value)">Login</button>
+	<button mat-raised-button (click)="onCancel()" cdkFocusInitial>Cancel</button>
+</div>
