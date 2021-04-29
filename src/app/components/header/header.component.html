@@ -1,12 +1,23 @@
 <div class="wrapper">
-    <div class="header">
-        <button mat-fab color="basic" class="header-back-button" (click)="goBack()" *ngIf="showBackBtn">
-            <mat-icon aria-hidden="false" aria-label="Back button">arrow_back</mat-icon>
-        </button>
-        <button mat-fab color="basic" class="header-menu-button" (click)="openMenu()" *ngIf="showMenu">
-            <mat-icon aria-hidden="false" aria-label="Menu">menu</mat-icon>
-        </button>
-        <span class="header-title">{{title}}</span>
-    </div>
+	<div class="header">
+		<button mat-mini-fab color="basic" class="header-back-button" (click)="goBack()" *ngIf="showBackBtn">
+			<mat-icon aria-hidden="false" aria-label="Back button">arrow_back</mat-icon>
+		</button>
+		<button mat-icon-button color="basic" class="header-menu-button" *ngIf="showMenu" [matMenuTriggerFor]="menu">
+			<mat-icon aria-hidden="false" aria-label="Menu">menu</mat-icon>
+		</button>
+		<mat-menu #menu="matMenu">
+			<button mat-menu-item (click)="login()">
+				{{ currentUser ? "Switch user" : "Login" }}
+			</button>
+			<button mat-menu-item (click)="logout()" *ngIf="currentUser">Logout</button>
+		</mat-menu>
+		<div class="header-title-container">
+			<span class="header-title">{{ title }}</span>
+			<div class="user-name-container" *ngIf="currentUser">
+				<mat-icon aria-hidden="false" aria-label="Example home icon">account_box</mat-icon>
+				<span class="user-name">{{ currentUser.name }}</span>
+			</div>
+		</div>
+	</div>
 </div>
-

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "fitness-exercises-doc": {
+      "hosting": {
+        "fitness-exercises-doc": [
+          "fitness-exercises-doc"
+        ]
+      }
+    }
+  }
+}

@@ -1,19 +1,19 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { WorkoutTypeComponent } from "./workout-type.component";
+import { SpinnerComponent } from "./spinner.component";
 
-describe("WorkoutTypeComponent", () => {
-	let component: WorkoutTypeComponent;
-	let fixture: ComponentFixture<WorkoutTypeComponent>;
+describe("SpinnerComponent", () => {
+	let component: SpinnerComponent;
+	let fixture: ComponentFixture<SpinnerComponent>;
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [WorkoutTypeComponent],
+			declarations: [SpinnerComponent],
 		}).compileComponents();
 	}));
 
 	beforeEach(() => {
-		fixture = TestBed.createComponent(WorkoutTypeComponent);
+		fixture = TestBed.createComponent(SpinnerComponent);
 		component = fixture.componentInstance;
 		fixture.detectChanges();
 	});

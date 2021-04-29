@@ -1,19 +1,19 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { WorkoutTypeComponent } from "./workout-type.component";
+import { LoginComponent } from "./login.component";
 
-describe("WorkoutTypeComponent", () => {
-	let component: WorkoutTypeComponent;
-	let fixture: ComponentFixture<WorkoutTypeComponent>;
+describe("LoginComponent", () => {
+	let component: LoginComponent;
+	let fixture: ComponentFixture<LoginComponent>;
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
-			declarations: [WorkoutTypeComponent],
+			declarations: [LoginComponent],
 		}).compileComponents();
 	}));
 
 	beforeEach(() => {
-		fixture = TestBed.createComponent(WorkoutTypeComponent);
+		fixture = TestBed.createComponent(LoginComponent);
 		component = fixture.componentInstance;
 		fixture.detectChanges();
 	});

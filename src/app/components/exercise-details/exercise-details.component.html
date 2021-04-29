@@ -1,15 +1,13 @@
-<h2 mat-dialog-title>{{exercise.name}}</h2>
+<h2 mat-dialog-title>{{ exercise.name }}</h2>
 <div mat-dialog-content #content>
-    <youtube-player 
-        *ngFor="let videoId of exercise.videoId"
-        videoId="{{videoId}}" 
-        [height]="content.offsetWidth * 0.56 - 50" 
-        [width]="content.offsetWidth - 50">
-    </youtube-player>
+	<youtube-player
+		*ngFor="let videoId of exercise.videoId"
+		videoId="{{ videoId }}"
+		[height]="content.offsetWidth * 0.56 - 50"
+		[width]="content.offsetWidth - 50"
+	>
+	</youtube-player>
 </div>
 <mat-dialog-actions align="end">
-    <button mat-button mat-dialog-close>Cancel</button>
+	<button mat-button mat-dialog-close>Cancel</button>
 </mat-dialog-actions>
-        
-
-

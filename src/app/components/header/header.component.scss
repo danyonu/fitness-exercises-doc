@@ -1,10 +1,10 @@
 @use "sass:map";
-@import '~@angular/material/theming';
+@import "~@angular/material/theming";
 
 @include mat-core();
 // @debug map.get($mat-purple, 700);
 .wrapper {
-	height: 71px;
+	height: 75px;
 
 	.header {
 		padding: 10px 0px;
@@ -12,20 +12,36 @@
 		width: 100%;
 		z-index: 100;
 		display: flex;
-	 	position: fixed;
+		position: fixed;
 		align-items: center;
 
-		&-back-button, &-menu-button  {
+		&-back-button,
+		&-menu-button {
 			margin-left: 10px;
 		}
 
-		&-title {
-			text-align: center;
-			font-size: 24px;
-			padding-left: 30px;
-			padding-right: 10px;
+		&-title-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			flex-grow: 1;
+
+			.header-title {
+				text-align: center;
+				font-size: 24px;
+				padding-right: 10px;
+				padding-left: 10px;
+			}
+
+			.user-name-container {
+				display: flex;
+				align-items: center;
+				margin-top: 10px;
+
+				.user-name {
+					margin-left: 5px;
+				}
+			}
 		}
 	}
 }
-
-

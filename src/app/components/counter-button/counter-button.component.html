@@ -1,0 +1,4 @@
+<button mat-mini-fab class="counter-btn" color="{{ complete ? 'accent' : 'primary' }}">
+	<span class="counter" *ngIf="!complete">{{ counter }}</span>
+	<mat-icon *ngIf="complete">done_outline</mat-icon>
+</button>

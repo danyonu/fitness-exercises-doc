@@ -1,0 +1,1460 @@
+{
+	"users": {
+		"dani": {
+			"name": "Dani",
+			"fazeCompletedInWorkout": {}
+		},
+		"corina": {
+			"name": "Corina",
+			"fazeCompletedInWorkout": {}
+		},
+		"test": {
+			"name": "test",
+			"fazeCompletedInWorkout": {
+				"1w": ["1f", "2f", "3f", "4f"]
+			},
+			"fazeCount": {
+				"1f": 4,
+				"2f": 4,
+				"3f": 4,
+				"4f": 3
+			},
+			"workoutCompletedInWorkoutType": {
+				"1w": ["1w"]
+			}
+		}
+	},
+	"workoutType": {
+		"1w": { "name": "Abs and booty", "workoutCount": 16, "workoutsCompleted": 0 }
+	},
+	"workouts": {
+		"1w": {
+			"name": "Antrenament 1",
+			"workoutTypeId": "1w",
+			"workoutFaze": {
+				"1f": {
+					"name": "Seria 1",
+					"reps": 4,
+					"exerciseIds": ["1e", "2e"]
+				},
+				"2f": {
+					"name": "Seria 2",
+					"reps": 4,
+					"exerciseIds": ["3e", "4e"]
+				},
+				"3f": {
+					"name": "Seria 3",
+					"reps": 4,
+					"exerciseIds": ["5e", "6e"]
+				},
+				"4f": {
+					"name": "Seria 4",
+					"reps": 3,
+					"exerciseIds": ["7e", "8e", "9e"]
+				}
+			}
+		},
+		"2w": {
+			"name": "Antrenament 2",
+			"workoutTypeId": "1w",
+			"workoutFaze": {
+				"5f": {
+					"name": "Seria 1",
+					"reps": 4,
+					"exerciseIds": ["10e", "11e"]
+				},
+				"6f": {
+					"name": "Seria 2",
+					"reps": 4,
+					"exerciseIds": ["12e", "13e"]
+				},
+				"7f": {
+					"name": "Seria 3",
+					"reps": 4,
+					"exerciseIds": ["14e", "15e"]
+				},
+				"8f": {
+					"name": "Seria 4",
+					"reps": 3,
+					"exerciseIds": ["16e", "17e", "18e"]
+				}
+			}
+		},
+		"3w": {
+			"name": "Antrenament 3",
+			"workoutTypeId": "1w",
+			"workoutFaze": {
+				"9f": {
+					"name": "Seria 1",
+					"reps": 4,
+					"exerciseIds": ["19e", "20e"]
+				},
+				"10f": {
+					"name": "Seria 2",
+					"reps": 4,
+					"exerciseIds": ["21e", "22e"]
+				},
+				"11f": {
+					"name": "Seria 3",
+					"reps": 4,
+					"exerciseIds": ["23e", "24e"]
+				},
+				"12f": {
+					"name": "Seria 4",
+					"reps": 3,
+					"exerciseIds": ["25e", "26e", "27e"]
+				}
+			}
+		},
+		"4w": {
+			"name": "Antrenament 4",
+			"workoutTypeId": "1w",
+			"workoutFaze": {
+				"13f": {
+					"name": "Seria 1",
+					"reps": 4,
+					"exerciseIds": ["28e", "29e"]
+				},
+				"14f": {
+					"name": "Seria 2",
+					"reps": 4,
+					"exerciseIds": ["30e", "31e"]
+				},
+				"15f": {
+					"name": "Seria 3",
+					"reps": 4,
+					"exerciseIds": ["32e", "33e"]
+				},
+				"16f": {
+					"name": "Seria 4",
+					"reps": 3,
+					"exerciseIds": ["34e", "35e", "36e"]
+				}
+			}
+		},
+		"5w": {
+			"name": "Antrenament 5",
+			"workoutTypeId": "1w",
+			"workoutFaze": {
+				"17f": {
+					"name": "Seria 1",
+					"reps": 4,
+					"exerciseIds": ["37e", "38e"]
+				},
+				"18f": {
+					"name": "Seria 2",
+					"reps": 4,
+					"exerciseIds": ["39e", "40e"]
+				},
+				"19f": {
+					"name": "Seria 3",
+					"reps": 4,
+					"exerciseIds": ["41e", "42e"]
+				},
+				"20f": {
+					"name": "Seria 4",
+					"reps": 3,
+					"exerciseIds": ["43e", "44e", "45e"]
+				}
+			}
+		},
+		"6w": {
+			"name": "Antrenament 6",
+			"workoutTypeId": "1w",
+			"workoutFaze": {
+				"21f": {
+					"name": "Seria 1",
+					"reps": 4,
+					"exerciseIds": ["46e", "47e"]
+				},
+				"22f": {
+					"name": "Seria 2",
+					"reps": 4,
+					"exerciseIds": ["48e", "49e"]
+				},
+				"23f": {
+					"name": "Seria 3",
+					"reps": 4,
+					"exerciseIds": ["50e", "51e"]
+				},
+				"24f": {
+					"name": "Seria 4",
+					"reps": 3,
+					"exerciseIds": ["52e", "53e", "54e"]
+				}
+			}
+		},
+		"7w": {
+			"name": "Antrenament 7",
+			"workoutTypeId": "1w",
+			"workoutFaze": {
+				"25f": {
+					"name": "Seria 1",
+					"reps": 4,
+					"exerciseIds": ["55e", "56e"]
+				},
+				"26f": {
+					"name": "Seria 2",
+					"reps": 4,
+					"exerciseIds": ["57e", "58e"]
+				},
+				"27f": {
+					"name": "Seria 3",
+					"reps": 4,
+					"exerciseIds": ["59e", "60e"]
+				},
+				"28f": {
+					"name": "Seria 4",
+					"reps": 3,
+					"exerciseIds": ["61e", "62e", "63e"]
+				}
+			}
+		},
+		"8w": {
+			"name": "Antrenament 8",
+			"workoutTypeId": "1w",
+			"workoutFaze": {
+				"29f": {
+					"name": "Seria 1",
+					"reps": 4,
+					"exerciseIds": ["64e", "65e"]
+				},
+				"30f": {
+					"name": "Seria 2",
+					"reps": 4,
+					"exerciseIds": ["66e", "67e"]
+				},
+				"31f": {
+					"name": "Seria 3",
+					"reps": 4,
+					"exerciseIds": ["68e", "69e"]
+				},
+				"32f": {
+					"name": "Seria 4",
+					"reps": 3,
+					"exerciseIds": ["70e", "71e"]
+				}
+			}
+		},
+		"9w": {
+			"name": "Antrenament 9",
+			"workoutTypeId": "1w",
+			"workoutFaze": {
+				"33f": {
+					"name": "Seria 1",
+					"reps": 4,
+					"exerciseIds": ["72e", "73e", "74e"]
+				},
+				"34f": {
+					"name": "Seria 2",
+					"reps": 4,
+					"exerciseIds": ["75e", "76e", "77e"]
+				},
+				"35f": {
+					"name": "Seria 3",
+					"reps": 4,
+					"exerciseIds": ["78e", "79e", "80e"]
+				},
+				"36f": {
+					"name": "Seria 4",
+					"reps": 3,
+					"exerciseIds": ["81"]
+				}
+			}
+		},
+		"10w": {
+			"name": "Antrenament 10",
+			"workoutTypeId": "1w",
+			"workoutFaze": {
+				"37f": {
+					"name": "Seria 1",
+					"reps": 4,
+					"exerciseIds": ["82e", "83e", "84e"]
+				},
+				"38f": {
+					"name": "Seria 2",
+					"reps": 4,
+					"exerciseIds": ["85e", "86e", "87e"]
+				},
+				"39f": {
+					"name": "Seria 3",
+					"reps": 4,
+					"exerciseIds": ["88e", "89e", "90e"]
+				},
+				"40f": {
+					"name": "Seria 4",
+					"reps": 3,
+					"exerciseIds": ["91"]
+				}
+			}
+		},
+		"11w": {
+			"name": "Antrenament 11",
+			"workoutTypeId": "1w",
+			"workoutFaze": {
+				"41f": {
+					"name": "Seria 1",
+					"reps": 4,
+					"exerciseIds": ["92e", "93e", "94e"]
+				},
+				"42f": {
+					"name": "Seria 2",
+					"reps": 4,
+					"exerciseIds": ["95e", "96e", "97e"]
+				},
+				"43f": {
+					"name": "Seria 3",
+					"reps": 4,
+					"exerciseIds": ["98e", "99e", "100e"]
+				},
+				"44f": {
+					"name": "Seria 4",
+					"reps": 3,
+					"exerciseIds": ["101"]
+				}
+			}
+		},
+		"12w": {
+			"name": "Antrenament 12",
+			"workoutTypeId": "1w",
+			"workoutFaze": {
+				"45f": {
+					"name": "Seria 1",
+					"reps": 4,
+					"exerciseIds": ["102e", "103e", "104e"]
+				},
+				"46f": {
+					"name": "Seria 2",
+					"reps": 4,
+					"exerciseIds": ["105e", "106e", "107e"]
+				},
+				"47f": {
+					"name": "Seria 3",
+					"reps": 4,
+					"exerciseIds": ["108e", "109e", "110e"]
+				},
+				"48f": {
+					"name": "Seria 4",
+					"reps": 3,
+					"exerciseIds": ["111"]
+				}
+			}
+		},
+		"13w": {
+			"name": "Antrenament 13",
+			"workoutTypeId": "1w",
+			"workoutFaze": {
+				"49f": {
+					"name": "Seria 1",
+					"reps": 4,
+					"exerciseIds": ["112e", "113e"]
+				},
+				"50f": {
+					"name": "Seria 2",
+					"reps": 4,
+					"exerciseIds": ["114e", "115e"]
+				},
+				"51f": {
+					"name": "Seria 3",
+					"reps": 4,
+					"exerciseIds": ["116e", "117e"]
+				},
+				"52f": {
+					"name": "Seria 4",
+					"reps": 3,
+					"exerciseIds": ["118e", "119e", "120e"]
+				}
+			}
+		},
+		"14w": {
+			"name": "Antrenament 14",
+			"workoutTypeId": "1w",
+			"workoutFaze": {
+				"53f": {
+					"name": "Seria 1",
+					"reps": 4,
+					"exerciseIds": ["121e", "122e"]
+				},
+				"54f": {
+					"name": "Seria 2",
+					"reps": 4,
+					"exerciseIds": ["123e", "124e"]
+				},
+				"55f": {
+					"name": "Seria 3",
+					"reps": 4,
+					"exerciseIds": ["125e", "126e"]
+				},
+				"56f": {
+					"name": "Seria 4",
+					"reps": 3,
+					"exerciseIds": ["127e", "128e", "129e"]
+				}
+			}
+		},
+		"15w": {
+			"name": "Antrenament 15",
+			"workoutTypeId": "1w",
+			"workoutFaze": {
+				"57f": {
+					"name": "Seria 1",
+					"reps": 4,
+					"exerciseIds": ["130e", "131e"]
+				},
+				"58f": {
+					"name": "Seria 2",
+					"reps": 4,
+					"exerciseIds": ["132e", "133e"]
+				},
+				"59f": {
+					"name": "Seria 3",
+					"reps": 4,
+					"exerciseIds": ["134e", "135e"]
+				},
+				"60f": {
+					"name": "Seria 4",
+					"reps": 3,
+					"exerciseIds": ["136e", "137e", "138e"]
+				}
+			}
+		},
+		"16w": {
+			"name": "Antrenament 16",
+			"workoutTypeId": "1w",
+			"workoutFaze": {
+				"61f": {
+					"name": "Seria 1",
+					"reps": 4,
+					"exerciseIds": ["139e", "140e"]
+				},
+				"62f": {
+					"name": "Seria 2",
+					"reps": 4,
+					"exerciseIds": ["141e", "142e"]
+				},
+				"63f": {
+					"name": "Seria 3",
+					"reps": 4,
+					"exerciseIds": ["143e", "144e"]
+				},
+				"64f": {
+					"name": "Seria 4",
+					"reps": 3,
+					"exerciseIds": ["145e", "146e", "147e"]
+				}
+			}
+		}
+	},
+	"exercises": {
+		"1e": {
+			"name": "Step up + genuflexiune",
+			"reps": "12",
+			"videoId": ["2QUikXelAME"],
+			"imageUrl": "",
+			"workoutFazeIds": ["1f"]
+		},
+		"2e": {
+			"name": "Plank lasi piciorul pe minge",
+			"reps": "20 pe fiecare picior",
+			"videoId": ["7f_htgPOAYQ"],
+			"imageUrl": "",
+			"workoutFazeIds": ["1f"]
+		},
+		"3e": {
+			"name": "Fandare in spate + one leg dead lift (cu gantera)",
+			"reps": "12 pe fiecare picior",
+			"videoId": ["i3uuokFXCwI"],
+			"imageUrl": "",
+			"workoutFazeIds": ["2f"]
+		},
+		"4e": {
+			"name": "Plank jacks + plank reach double",
+			"reps": "20",
+			"videoId": ["xcBz0TtHqWI", "Ahn6Ar0T9BU"],
+			"imageUrl": "",
+			"workoutFazeIds": ["2f"]
+		},
+		"5e": {
+			"name": "Picior lateral cu elastic",
+			"reps": "30 cu fiecare picior",
+			"videoId": ["ZxOThLvH7uE"],
+			"imageUrl": "",
+			"workoutFazeIds": ["3f"]
+		},
+		"6e": {
+			"name": "Side plank si reach cu gantera",
+			"reps": "20",
+			"videoId": ["-ruAdV34H54"],
+			"imageUrl": "",
+			"workoutFazeIds": ["3f"]
+		},
+		"7e": {
+			"name": "Sit up pe un picior cu gantera",
+			"reps": "20 pe fiecare picior",
+			"videoId": ["QoznNIG0dCM"],
+			"imageUrl": "",
+			"workoutFazeIds": ["4f"]
+		},
+		"8e": {
+			"name": "Reverse crunch cu mingea",
+			"reps": "25",
+			"videoId": ["1yNGURS7gOM"],
+			"imageUrl": "",
+			"workoutFazeIds": ["4f"]
+		},
+		"9e": {
+			"name": "Plank - 1 min",
+			"reps": "3",
+			"videoId": ["WP0BFgeUQwA"],
+			"imageUrl": "",
+			"workoutFazeIds": ["4f"]
+		},
+		"10e": {
+			"name": "In out jump squats + fandare in fata",
+			"reps": "12 pe fiecare picior",
+			"videoId": ["4WOsRSZAFGw", "aNUhPGUgN18"],
+			"imageUrl": "",
+			"workoutFazeIds": ["5f"]
+		},
+		"11e": {
+			"name": "Plank pulse picioarele pe minge",
+			"reps": "20",
+			"videoId": ["FW_dVNt6wd0"],
+			"imageUrl": "",
+			"workoutFazeIds": ["5f"]
+		},
+		"12e": {
+			"name": "Fandare cu un picior pe step",
+			"reps": "12 pe fiecare picior",
+			"videoId": ["vDIoKEy7vCo"],
+			"imageUrl": "",
+			"workoutFazeIds": ["6f"]
+		},
+		"13e": {
+			"name": "Suicide plank +plank jacks slow",
+			"reps": "20",
+			"videoId": ["LxpjoeOIbRM"],
+			"imageUrl": "",
+			"workoutFazeIds": ["6f"]
+		},
+		"14e": {
+			"name": "Ball hip thrust cu gantera si elastic umerii pe banca",
+			"reps": "30",
+			"videoId": [""],
+			"imageUrl": "",
+			"workoutFazeIds": ["7f"]
+		},
+		"15e": {
+			"name": "4 pasi stanga 4 drepta mers in plank pe palme",
+			"reps": "10",
+			"videoId": ["p2ZXI5hNFzA"],
+			"imageUrl": "",
+			"workoutFazeIds": ["7f"]
+		},
+		"16e": {
+			"name": "Abs cerc + cot la genunchi cu saci",
+			"reps": "20",
+			"videoId": ["4Vhq0zakuiA", "orvO32fHb1A"],
+			"imageUrl": "",
+			"workoutFazeIds": ["8f"]
+		},
+		"17e": {
+			"name": "Abs foarfeci de sus pana jos cu saci",
+			"reps": "20",
+			"videoId": ["https://youtu.be/ap4DqnKmrqc"],
+			"imageUrl": "",
+			"workoutFazeIds": ["8f"]
+		},
+		"18e": {
+			"name": "Plank - 1 min",
+			"reps": "3",
+			"videoId": ["WP0BFgeUQwA"],
+			"imageUrl": "",
+			"workoutFazeIds": ["8f"]
+		},
+		"19e": {
+			"name": "Genu + fandare laterala cu kettlebell sau gantere",
+			"reps": "12 pe fiecare picior",
+			"videoId": ["C0dFeb1v4xw"],
+			"imageUrl": "",
+			"workoutFazeIds": ["9f"]
+		},
+		"20e": {
+			"name": "Plank arm raise cu gantere",
+			"reps": "12 pe fiecare picior",
+			"videoId": ["TyiujJcZHVY"],
+			"imageUrl": "",
+			"workoutFazeIds": ["9f"]
+		},
+		"21e": {
+			"name": "Indreptare + up-right-row cu gantere sau kettlebell",
+			"reps": "12",
+			"videoId": ["yq8XTJqQf9I"],
+			"imageUrl": "",
+			"workoutFazeIds": ["10f"]
+		},
+		"22e": {
+			"name": "Pike press + knee tucks pe minge",
+			"reps": "20",
+			"videoId": ["BQsUYSGfJq4"],
+			"imageUrl": "",
+			"workoutFazeIds": ["10f"]
+		},
+		"23e": {
+			"name": "One leg squat",
+			"reps": "12 pe fiecare picior",
+			"videoId": ["uJ4eA2wUXdw"],
+			"imageUrl": "",
+			"workoutFazeIds": ["11f"]
+		},
+		"24e": {
+			"name": "Plank twist + plank taps",
+			"reps": "20",
+			"videoId": ["HmdimRR3GtM", "ztpXZm7Dv80"],
+			"imageUrl": "",
+			"workoutFazeIds": ["11f"]
+		},
+		"25e": {
+			"name": "Abs windmill",
+			"reps": "20",
+			"videoId": ["FsbIRLS81qI"],
+			"imageUrl": "",
+			"workoutFazeIds": ["12f"]
+		},
+		"26e": {
+			"name": "Abs gantera intre picioare",
+			"reps": "20",
+			"videoId": ["FsbIRLS81qI"],
+			"imageUrl": "",
+			"workoutFazeIds": ["12f"]
+		},
+		"27e": {
+			"name": "Plank - 1 min",
+			"reps": "3",
+			"videoId": ["WP0BFgeUQwA"],
+			"imageUrl": "",
+			"workoutFazeIds": ["8f"]
+		},
+		"28e": {
+			"name": "Indreptare + step up cu gantere",
+			"reps": "12 pe fiecare picior",
+			"videoId": ["_3n_5LhQT20"],
+			"imageUrl": "",
+			"workoutFazeIds": ["13f"]
+		},
+		"29e": {
+			"name": "Side plank leg lifts",
+			"reps": "20 pe fiecare parte",
+			"videoId": ["ZZkgopVBPMg"],
+			"imageUrl": "",
+			"workoutFazeIds": ["13f"]
+		},
+		"30e": {
+			"name": "Sumo pulse squats cu kettlebell sau gantere",
+			"reps": "12",
+			"videoId": ["3h1A9GfB07w"],
+			"imageUrl": "",
+			"workoutFazeIds": ["14f"]
+		},
+		"31e": {
+			"name": "Plank kicks + butt up",
+			"reps": "20",
+			"videoId": ["RlLGXmC_Fx8", "nm6MAVLYZH0"],
+			"imageUrl": "",
+			"workoutFazeIds": ["14f"]
+		},
+		"32e": {
+			"name": "Wall sist + biceps cu gantere",
+			"reps": "12",
+			"videoId": ["pdG1n2vjits"],
+			"imageUrl": "",
+			"workoutFazeIds": ["15f"]
+		},
+		"33e": {
+			"name": "Plank mana picior cu saci pe coate",
+			"reps": "20 pe fiecare parte",
+			"videoId": ["iWjH5xgZgyQ"],
+			"imageUrl": "",
+			"workoutFazeIds": ["15f"]
+		},
+		"34e": {
+			"name": "Ball in out + cerc(picioarele rămân sus)",
+			"reps": "20",
+			"videoId": ["Lrmlsxk3zx4", "4Vhq0zakuiA"],
+			"imageUrl": "",
+			"workoutFazeIds": ["16f"]
+		},
+		"35e": {
+			"name": "Abs in out cu elasticul",
+			"reps": "20",
+			"videoId": ["223MRkTMChc"],
+			"imageUrl": "",
+			"workoutFazeIds": ["16f"]
+		},
+		"36e": { "name": "Plank", "reps": "3", "videoId": ["pSHjTRCQxIw"], "imageUrl": "", "workoutFazeIds": ["16f"] },
+		"37e": {
+			"name": "Good morning + squat cu gantere",
+			"reps": "12",
+			"videoId": ["YA-h3n9L4YU", "SRolvrsmBzU"],
+			"imageUrl": "",
+			"workoutFazeIds": ["17f"]
+		},
+		"38e": {
+			"name": "Comando push up",
+			"reps": "12",
+			"videoId": ["pvD8tO8uuX0"],
+			"imageUrl": "",
+			"workoutFazeIds": ["17f"]
+		},
+		"39e": {
+			"name": "Frog hip thrust pe minge cu gantere",
+			"reps": "12",
+			"videoId": ["aYM1ItKp94Y"],
+			"imageUrl": "",
+			"workoutFazeIds": ["18f"]
+		},
+		"40e": {
+			"name": "Spider plank pe palme + puls",
+			"reps": "20",
+			"videoId": ["7kI5lB-8eYE", "FW_dVNt6wd0"],
+			"imageUrl": "",
+			"workoutFazeIds": ["18f"]
+		},
+		"41e": {
+			"name": "Side donkey kicks cu elastic si saci-",
+			"reps": "30",
+			"videoId": ["9hKsATwrmzY"],
+			"imageUrl": "",
+			"workoutFazeIds": ["19f"]
+		},
+		"42e": {
+			"name": "Plank genunchiul jos sus alternativ duble",
+			"reps": "25",
+			"videoId": ["kv8T98YIGLg"],
+			"imageUrl": "",
+			"workoutFazeIds": ["19f"]
+		},
+		"43e": {
+			"name": "Abs treci picioarele peste gantera duble",
+			"reps": "20",
+			"videoId": ["MfBuRto8t70"],
+			"imageUrl": "",
+			"workoutFazeIds": ["20f"]
+		},
+		"44e": {
+			"name": "Abs foarfeci de sus pana jos cu saci",
+			"reps": "20",
+			"videoId": ["ap4DqnKmrqc"],
+			"imageUrl": "",
+			"workoutFazeIds": ["20f"]
+		},
+		"45e": {
+			"name": "Plank - 1 min",
+			"reps": "3",
+			"videoId": ["pSHjTRCQxIw"],
+			"imageUrl": "",
+			"workoutFazeIds": ["20f"]
+		},
+		"46e": {
+			"name": "Fandari bulgaresti cu gantere",
+			"reps": "12 pe fiecare picior",
+			"videoId": ["2C-uNgKwPLE"],
+			"imageUrl": "",
+			"workoutFazeIds": ["21f"]
+		},
+		"47e": {
+			"name": "Mers in plank + flotare",
+			"reps": "20",
+			"videoId": ["GpnsryVpk0w"],
+			"imageUrl": "",
+			"workoutFazeIds": ["21f"]
+		},
+		"48e": {
+			"name": "Fandare picior spate cu gantere",
+			"reps": "12",
+			"videoId": ["K3vgNL2OFI8"],
+			"imageUrl": "",
+			"workoutFazeIds": ["22f"]
+		},
+		"49e": {
+			"name": "Plank leg lifts  cu saci",
+			"reps": "20",
+			"videoId": ["ZZkgopVBPMg"],
+			"imageUrl": "",
+			"workoutFazeIds": ["22f"]
+		},
+		"50e": {
+			"name": "Squat jumps cu elastic si gantera pe step",
+			"reps": "12",
+			"videoId": ["v-9qVIOcGCE"],
+			"imageUrl": "",
+			"workoutFazeIds": ["23f"]
+		},
+		"51e": {
+			"name": "Plank treci peste step duble",
+			"reps": "20",
+			"videoId": ["zqc77BZ0GbY"],
+			"imageUrl": "",
+			"workoutFazeIds": ["23f"]
+		},
+		"52e": {
+			"name": "Ball in out + foarfeca",
+			"reps": "20",
+			"videoId": ["Lrmlsxk3zx4", "ap4DqnKmrqc"],
+			"imageUrl": "",
+			"workoutFazeIds": ["24f"]
+		},
+		"53e": {
+			"name": "Abs crunch pe minge cu greutate",
+			"reps": "25",
+			"videoId": ["r1QTuC2yYDI"],
+			"imageUrl": "",
+			"workoutFazeIds": ["24f"]
+		},
+		"54e": {
+			"name": "Plank - 1 min",
+			"reps": "3",
+			"videoId": ["pSHjTRCQxIw"],
+			"imageUrl": "",
+			"workoutFazeIds": ["24f"]
+		},
+		"55e": {
+			"name": "Kettlebell swing",
+			"reps": "16",
+			"videoId": ["YSxHifyI6s8"],
+			"imageUrl": "",
+			"workoutFazeIds": ["25f"]
+		},
+		"56e": {
+			"name": "Comando push up + suicide plank",
+			"reps": "12",
+			"videoId": ["pvD8tO8uuX0", "jrLKYQofYxs"],
+			"imageUrl": "",
+			"workoutFazeIds": ["25f"]
+		},
+		"57e": {
+			"name": "One leg hip thrust (umerii sus)",
+			"reps": "12 pe fiecare picior",
+			"videoId": ["L4nTaesNm0E"],
+			"imageUrl": "",
+			"workoutFazeIds": ["26f"]
+		},
+		"58e": {
+			"name": "Plank jacks",
+			"reps": "25",
+			"videoId": ["xcBz0TtHqWI"],
+			"imageUrl": "",
+			"workoutFazeIds": ["26f"]
+		},
+		"59e": {
+			"name": "Wall sits in out cu gantera + misti picioarele",
+			"reps": "1",
+			"videoId": ["UMI3-hhHXIM"],
+			"imageUrl": "",
+			"workoutFazeIds": ["27f"]
+		},
+		"60e": {
+			"name": "Plank roll out pe minge",
+			"reps": "20",
+			"videoId": ["n6PyhehLqPI"],
+			"imageUrl": "",
+			"workoutFazeIds": ["27f"]
+		},
+		"61e": {
+			"name": "Abs genunchii la piept cu saci fara sa pui mainile jos",
+			"reps": "25",
+			"videoId": ["cE85YAFMUr4"],
+			"imageUrl": "",
+			"workoutFazeIds": ["28f"]
+		},
+		"62e": {
+			"name": "Abs gantere la sireturi",
+			"reps": "20",
+			"videoId": ["hp8z4Vl2DPI"],
+			"imageUrl": "",
+			"workoutFazeIds": ["28f"]
+		},
+		"63e": {
+			"name": "Plank - 1 min",
+			"reps": "3",
+			"videoId": ["pSHjTRCQxIw"],
+			"imageUrl": "",
+			"workoutFazeIds": ["28f"]
+		},
+		"64e": {
+			"name": "Genu + arnold press",
+			"reps": "12",
+			"videoId": ["SRolvrsmBzU", "3ml7BH7mNwQ"],
+			"imageUrl": "",
+			"workoutFazeIds": ["29f"]
+		},
+		"65e": {
+			"name": "Side plank crunch coate genunchi",
+			"reps": "20",
+			"videoId": ["7G4llsBNCgA"],
+			"imageUrl": "",
+			"workoutFazeIds": ["29f"]
+		},
+		"66e": {
+			"name": "Courtsy lunges cu gantere",
+			"reps": "24",
+			"videoId": ["cVYnf2CFO9M"],
+			"imageUrl": "",
+			"workoutFazeIds": ["30f"]
+		},
+		"67e": {
+			"name": "Plank up down pe step",
+			"reps": "25",
+			"videoId": ["RkdkNgqopdE", "nm6MAVLYZH0"],
+			"imageUrl": "",
+			"workoutFazeIds": ["30f"]
+		},
+		"68e": {
+			"name": "Mers lateral cu elasticul si gantera",
+			"reps": "1",
+			"videoId": ["p2ZXI5hNFzA"],
+			"imageUrl": "",
+			"workoutFazeIds": ["31f"]
+		},
+		"69e": {
+			"name": "Ball knees to chest + butt up",
+			"reps": "20",
+			"videoId": ["Cb7UZqeuMI8"],
+			"imageUrl": "",
+			"workoutFazeIds": ["31f"]
+		},
+		"70e": {
+			"name": "Abs crunch pe un picior cu saci",
+			"reps": "20",
+			"videoId": ["ervCsM3ry7A"],
+			"imageUrl": "",
+			"workoutFazeIds": ["32f"]
+		},
+		"71e": {
+			"name": "Plank - 1 min",
+			"reps": "1",
+			"videoId": ["pSHjTRCQxIw"],
+			"imageUrl": "",
+			"workoutFazeIds": ["32f"]
+		},
+		"72e": {
+			"name": "Sumo squats + picior lateral (cu kettlbell)",
+			"reps": "14",
+			"videoId": ["9lkorIuIekg"],
+			"imageUrl": "",
+			"workoutFazeIds": ["33f"]
+		},
+		"73e": {
+			"name": "Ramat spate plank cu gantere",
+			"reps": "14",
+			"videoId": ["Pc0Pwnlg1Yw"],
+			"imageUrl": "",
+			"workoutFazeIds": ["33f"]
+		},
+		"74e": {
+			"name": "Ball in out",
+			"reps": "25",
+			"videoId": ["Lrmlsxk3zx4"],
+			"imageUrl": "",
+			"workoutFazeIds": ["33f"]
+		},
+		"75e": {
+			"name": "One leg deadlift (cu kettlbell)",
+			"reps": "16",
+			"videoId": ["b9bHy3ojQWA"],
+			"imageUrl": "",
+			"workoutFazeIds": ["34f"]
+		},
+		"76e": {
+			"name": "Plank treci peste step duble",
+			"reps": "20",
+			"videoId": ["a9MRqDk0ojE"],
+			"imageUrl": "",
+			"workoutFazeIds": ["34f"]
+		},
+		"77e": {
+			"name": "Crunch invers cu saci",
+			"reps": "25",
+			"videoId": ["gAyTBB4lm3I"],
+			"imageUrl": "",
+			"workoutFazeIds": ["34f"]
+		},
+		"78e": {
+			"name": "Wall sits in out cu elastic si gantera la piept",
+			"reps": "1",
+			"videoId": ["EJndMbpO0cM"],
+			"imageUrl": "",
+			"workoutFazeIds": ["35f"]
+		},
+		"79e": {
+			"name": "Plank kicks duble (cu saci)",
+			"reps": "20",
+			"videoId": ["W00KdSl5stU"],
+			"imageUrl": "",
+			"workoutFazeIds": ["35f"]
+		},
+		"80e": {
+			"name": "Abs laterale (cu saci)",
+			"reps": "20 pe fiecare parte",
+			"videoId": [""],
+			"imageUrl": "",
+			"workoutFazeIds": ["35f"]
+		},
+		"81e": {
+			"name": "Plank - 1 min",
+			"reps": "1",
+			"videoId": ["pSHjTRCQxIw"],
+			"imageUrl": "",
+			"workoutFazeIds": ["36f"]
+		},
+		"82e": {
+			"name": "Step up + fandare in spate (cu gantere)",
+			"reps": "14 pe fiecare picior",
+			"videoId": ["F72adrSjfiU"],
+			"imageUrl": "",
+			"workoutFazeIds": ["37f"]
+		},
+		"83e": {
+			"name": "Plank suicide",
+			"reps": "20",
+			"videoId": ["iKKhgsrQs8E"],
+			"imageUrl": "",
+			"workoutFazeIds": ["37f"]
+		},
+		"84e": {
+			"name": "Abs cercuri cu saci",
+			"reps": "20",
+			"videoId": ["4Vhq0zakuiA"],
+			"imageUrl": "",
+			"workoutFazeIds": ["37f"]
+		},
+		"85e": {
+			"name": "Semicerc cu saci",
+			"reps": "25 in fiecare directie",
+			"videoId": ["i5BOv1cvq_w"],
+			"imageUrl": "",
+			"workoutFazeIds": ["38f"]
+		},
+		"86e": {
+			"name": "Plank reach pe coate duble",
+			"reps": "20",
+			"videoId": ["rhsK2HHqQGg"],
+			"imageUrl": "",
+			"workoutFazeIds": ["38f"]
+		},
+		"87e": {
+			"name": "V ups cu gabtera",
+			"reps": "20",
+			"videoId": ["gYHmfx1x224"],
+			"imageUrl": "",
+			"workoutFazeIds": ["38f"]
+		},
+		"88e": {
+			"name": "Side donkey kicks (cu elastic si saci)",
+			"reps": "30",
+			"videoId": ["9hKsATwrmzY"],
+			"imageUrl": "",
+			"workoutFazeIds": ["39f"]
+		},
+		"89e": {
+			"name": "Pike press pe minge",
+			"reps": "20",
+			"videoId": ["4YOKVI9aSjE"],
+			"imageUrl": "",
+			"workoutFazeIds": ["39f"]
+		},
+		"90e": {
+			"name": "Abs gantera la sireturi",
+			"reps": "20",
+			"videoId": ["y6Bv_0Shhc8"],
+			"imageUrl": "",
+			"workoutFazeIds": ["39f"]
+		},
+		"91e": {
+			"name": "Plank - 1 min",
+			"reps": "1",
+			"videoId": ["pSHjTRCQxIw"],
+			"imageUrl": "",
+			"workoutFazeIds": ["40f"]
+		},
+		"92e": {
+			"name": "Lateral lunges (cu kettlebell)",
+			"reps": "14",
+			"videoId": ["IcAAJvC2tuo"],
+			"imageUrl": "",
+			"workoutFazeIds": ["41f"]
+		},
+		"93e": {
+			"name": "Mers in plank + spider plank",
+			"reps": "20",
+			"videoId": ["Ao-nV3IdINQ", "HVyHcalg61g"],
+			"imageUrl": "",
+			"workoutFazeIds": ["41f"]
+		},
+		"94e": {
+			"name": "Abs foarfeci duble cu saci",
+			"reps": "25",
+			"videoId": ["WoNCIBVLbgY"],
+			"imageUrl": "",
+			"workoutFazeIds": ["41f"]
+		},
+		"95e": {
+			"name": "One leg hip thrust (cu gantera umerii sus)",
+			"reps": "14",
+			"videoId": ["qCObDXTe4KY"],
+			"imageUrl": "",
+			"workoutFazeIds": ["42f"]
+		},
+		"96e": {
+			"name": "Ball knee tucks",
+			"reps": "20",
+			"videoId": ["lotY-gee_CQ"],
+			"imageUrl": "",
+			"workoutFazeIds": ["42f"]
+		},
+		"97e": {
+			"name": "Abs cot la genunchi opus duble cu saci",
+			"reps": "25",
+			"videoId": ["hlcQQdYSJgY"],
+			"imageUrl": "",
+			"workoutFazeIds": ["42f"]
+		},
+		"98e": {
+			"name": "3 pasi stanga 3 dreapta (cu elastic la gambe)",
+			"reps": "20",
+			"videoId": ["p2ZXI5hNFzA"],
+			"imageUrl": "",
+			"workoutFazeIds": ["43f"]
+		},
+		"99e": {
+			"name": "Plank lateral sus jos",
+			"reps": "25 pe fiecare parte",
+			"videoId": ["ewr7YpHJOv8"],
+			"imageUrl": "",
+			"workoutFazeIds": ["43f"]
+		},
+		"100e": {
+			"name": "Sit up twsit",
+			"reps": "20",
+			"videoId": ["NZ1oOuj2L2k"],
+			"imageUrl": "",
+			"workoutFazeIds": ["43f"]
+		},
+		"101e": {
+			"name": "Plank - 1 min",
+			"reps": "1",
+			"videoId": ["pSHjTRCQxIw"],
+			"imageUrl": "",
+			"workoutFazeIds": ["44f"]
+		},
+		"102e": {
+			"name": "Fandari in mers (cu gantere)",
+			"reps": "14 pe fiecare picior",
+			"videoId": ["YYWhkctnP2o"],
+			"imageUrl": "",
+			"workoutFazeIds": ["45f"]
+		},
+		"103e": {
+			"name": "Triceps dips",
+			"reps": "16",
+			"videoId": ["0326dy_-CzM"],
+			"imageUrl": "",
+			"workoutFazeIds": ["45f"]
+		},
+		"104e": {
+			"name": "Ball pass duble",
+			"reps": "20",
+			"videoId": ["Lrmlsxk3zx4"],
+			"imageUrl": "",
+			"workoutFazeIds": ["45f"]
+		},
+		"105e": {
+			"name": "Stiff dumbell deadlift",
+			"reps": "14",
+			"videoId": ["eDFAAb6vJH4"],
+			"imageUrl": "",
+			"workoutFazeIds": ["46f"]
+		},
+		"106e": {
+			"name": "Pank jacks slow",
+			"reps": "20",
+			"videoId": ["s2bum2lFhIQ"],
+			"imageUrl": "",
+			"workoutFazeIds": ["46f"]
+		},
+		"107e": {
+			"name": "Abs twist duble cu gantera",
+			"reps": "25",
+			"videoId": ["drvh39387LY"],
+			"imageUrl": "",
+			"workoutFazeIds": ["46f"]
+		},
+		"108e": {
+			"name": "Picior lateral (cu elastic)",
+			"reps": "30",
+			"videoId": ["3ZPbmjy15b0"],
+			"imageUrl": "",
+			"workoutFazeIds": ["47f"]
+		},
+		"109e": {
+			"name": "Plank spider duble",
+			"reps": "20",
+			"videoId": ["HVyHcalg61g"],
+			"imageUrl": "",
+			"workoutFazeIds": ["47f"]
+		},
+		"110e": {
+			"name": "Abs crunch coate genunchi",
+			"reps": "20",
+			"videoId": ["hlcQQdYSJgY"],
+			"imageUrl": "",
+			"workoutFazeIds": ["47f"]
+		},
+		"111e": {
+			"name": "Plank - 1 min",
+			"reps": "1",
+			"videoId": ["pSHjTRCQxIw"],
+			"imageUrl": "",
+			"workoutFazeIds": ["48f"]
+		},
+		"112e": {
+			"name": "Front squats cu gantere",
+			"reps": "12",
+			"videoId": ["MJao9o7ROs0"],
+			"imageUrl": "",
+			"workoutFazeIds": ["49f"]
+		},
+		"113e": { "name": "Push ups", "reps": "12", "videoId": ["rjc0O7OXS3g"], "imageUrl": "", "workoutFazeIds": ["49f"] },
+		"114e": {
+			"name": "Bulgarian split squats (cu gantere)",
+			"reps": "12",
+			"videoId": ["2C-uNgKwPLE"],
+			"imageUrl": "",
+			"workoutFazeIds": ["50f"]
+		},
+		"115e": {
+			"name": "Plank up down pe step + spider plank cu saci",
+			"reps": "20",
+			"videoId": ["-R6t7PaZA9E", "HVyHcalg61g"],
+			"imageUrl": "",
+			"workoutFazeIds": ["50f"]
+		},
+		"116e": {
+			"name": "Wall sit in out cu elastic (cu gantere)",
+			"reps": "1",
+			"videoId": ["O0-buEV_NzQ"],
+			"imageUrl": "",
+			"workoutFazeIds": ["51f"]
+		},
+		"117e": {
+			"name": "Side plank reach",
+			"reps": "25 pe fiecare parte",
+			"videoId": ["-ruAdV34H54."],
+			"imageUrl": "",
+			"workoutFazeIds": ["51f"]
+		},
+		"118e": {
+			"name": "Abs genunchii la piept (cu saci)",
+			"reps": "25",
+			"videoId": ["cE85YAFMUr4"],
+			"imageUrl": "",
+			"workoutFazeIds": ["52f"]
+		},
+		"119e": {
+			"name": "Leg lifts (cu saci)",
+			"reps": "25",
+			"videoId": ["l-mPHKQFMkk"],
+			"imageUrl": "",
+			"workoutFazeIds": ["52f"]
+		},
+		"120e": {
+			"name": "Plank - 1 min",
+			"reps": "1",
+			"videoId": ["pSHjTRCQxIw"],
+			"imageUrl": "",
+			"workoutFazeIds": ["52f"]
+		},
+		"121e": {
+			"name": "Kettlbell swings",
+			"reps": "12",
+			"videoId": ["YSxHifyI6s8"],
+			"imageUrl": "",
+			"workoutFazeIds": ["53f"]
+		},
+		"122e": {
+			"name": "Ramat spate plank cu gantere",
+			"reps": "12 pe fiecare parte",
+			"videoId": ["Pc0Pwnlg1Yw"],
+			"imageUrl": "",
+			"workoutFazeIds": ["53f"]
+		},
+		"123e": {
+			"name": "Pulse squats cu kettlbell",
+			"reps": "12",
+			"videoId": ["j9R9ISazx9c"],
+			"imageUrl": "",
+			"workoutFazeIds": ["54f"]
+		},
+		"124e": {
+			"name": "Plank jacks slow",
+			"reps": "25",
+			"videoId": ["s2bum2lFhIQ"],
+			"imageUrl": "",
+			"workoutFazeIds": ["54f"]
+		},
+		"125e": {
+			"name": "Ball curls",
+			"reps": "30",
+			"videoId": ["Kk8dpH4ZPos"],
+			"imageUrl": "",
+			"workoutFazeIds": ["55f"]
+		},
+		"126e": {
+			"name": "Ball knee tucks",
+			"reps": "20",
+			"videoId": ["lotY-gee_CQ"],
+			"imageUrl": "",
+			"workoutFazeIds": ["55f"]
+		},
+		"127e": {
+			"name": "V ups pe lateral",
+			"reps": "20 pe fiecare parte",
+			"videoId": ["HGl447ifkU8"],
+			"imageUrl": "",
+			"workoutFazeIds": ["56f"]
+		},
+		"128e": {
+			"name": "Ball in out",
+			"reps": "25",
+			"videoId": ["Lrmlsxk3zx4"],
+			"imageUrl": "",
+			"workoutFazeIds": ["56f"]
+		},
+		"129e": {
+			"name": "Plank - 1 min",
+			"reps": "1",
+			"videoId": ["WP0BFgeUQwA"],
+			"imageUrl": "",
+			"workoutFazeIds": ["56f"]
+		},
+		"130e": {
+			"name": "Fandare fata spate",
+			"reps": "12 pe fiecare picior",
+			"videoId": ["WlGj3ABffAw"],
+			"imageUrl": "",
+			"workoutFazeIds": ["57f"]
+		},
+		"131e": {
+			"name": "Triceps dips",
+			"reps": "12",
+			"videoId": ["6kALZikXxLc."],
+			"imageUrl": "",
+			"workoutFazeIds": ["57f"]
+		},
+		"132e": {
+			"name": "One leg bench squat (cu gantera)",
+			"reps": "12",
+			"videoId": ["uJ4eA2wUXdw"],
+			"imageUrl": "",
+			"workoutFazeIds": ["58f"]
+		},
+		"133e": {
+			"name": "Plank twist",
+			"reps": "25",
+			"videoId": ["HmdimRR3GtM"],
+			"imageUrl": "",
+			"workoutFazeIds": ["58f"]
+		},
+		"134e": {
+			"name": "Picior lateral pe minge",
+			"reps": "25 pe fiecare picior",
+			"videoId": ["NIbiSAqXPEw"],
+			"imageUrl": "",
+			"workoutFazeIds": ["59f"]
+		},
+		"135e": {
+			"name": "Plank genunchii jos sus + fata spate",
+			"reps": "20",
+			"videoId": ["g57zkyRjYH4", "FW_dVNt6wd0"],
+			"imageUrl": "",
+			"workoutFazeIds": ["59f"]
+		},
+		"136e": {
+			"name": "Abs crunch invers cu saci",
+			"reps": "25",
+			"videoId": ["gAyTBB4lm3I"],
+			"imageUrl": "",
+			"workoutFazeIds": ["60f"]
+		},
+		"137e": {
+			"name": "Abs gantere la sireturi",
+			"reps": "20",
+			"videoId": ["GTX63djcDEo"],
+			"imageUrl": "",
+			"workoutFazeIds": ["60f"]
+		},
+		"138e": {
+			"name": "Plank - 1 min",
+			"reps": "1",
+			"videoId": ["WP0BFgeUQwA"],
+			"imageUrl": "",
+			"workoutFazeIds": ["60f"]
+		},
+		"139e": {
+			"name": "Mers in genu pe lateral( cu elastic la gambe si gantera la piept)",
+			"reps": "12 in fiecare directie",
+			"videoId": ["p2ZXI5hNFzA"],
+			"imageUrl": "",
+			"workoutFazeIds": ["61f"]
+		},
+		"140e": {
+			"name": "Plank side to side duble",
+			"reps": "20",
+			"videoId": ["hP6j8Y57gwk"],
+			"imageUrl": "",
+			"workoutFazeIds": ["61f"]
+		},
+		"141e": {
+			"name": "Sumo squats cu kettlebell",
+			"reps": "12",
+			"videoId": ["rt7-XtK7jDA"],
+			"imageUrl": "",
+			"workoutFazeIds": ["62f"]
+		},
+		"142e": {
+			"name": "Side plank leg rause",
+			"reps": "20",
+			"videoId": ["edTXNT-etYc"],
+			"imageUrl": "",
+			"workoutFazeIds": ["62f"]
+		},
+		"144e": {
+			"name": "Plank reach duble",
+			"reps": "12",
+			"videoId": ["Ahn6Ar0T9BU"],
+			"imageUrl": "",
+			"workoutFazeIds": ["63f"]
+		},
+		"145e": {
+			"name": "Abs cerc + leg lifts cu saci",
+			"reps": "25",
+			"videoId": ["4Vhq0zakuiA", "l-mPHKQFMkk"],
+			"imageUrl": "",
+			"workoutFazeIds": ["64f"]
+		},
+		"146e": {
+			"name": "Abs genunchii la piept cu scai",
+			"reps": "25",
+			"videoId": ["rSiSZaCtdGA"],
+			"imageUrl": "",
+			"workoutFazeIds": ["64f"]
+		},
+		"147e": {
+			"name": "Plank - 1 min",
+			"reps": "1",
+			"videoId": ["WP0BFgeUQwA"],
+			"imageUrl": "",
+			"workoutFazeIds": ["64f"]
+		}
+	}
+}

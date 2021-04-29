@@ -1,38 +1,61 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { map, tap } from 'rxjs/operators'
-import { Observable } from 'rxjs';
-import { FetchDataService } from 'src/app/services/fetch-data.service';
-import { Workouts } from 'src/app/interfaces/workouts';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnDestroy, OnInit } from "@angular/core";
+import { map, mergeMap, tap } from "rxjs/operators";
+import { combineLatest, merge, Observable, Subscription } from "rxjs";
+import { FetchDataService } from "src/app/services/fetch-data.service";
+import { Workout } from "src/app/interfaces/workouts";
+import { ActivatedRoute } from "@angular/router";
+import { UserService } from "src/app/services/user.service";
+import { User } from "src/app/interfaces/user";
 
 @Component({
-  selector: 'app-workout-list',
-  templateUrl: './workout-list.component.html',
-  styleUrls: ['./workout-list.component.scss']
+	selector: "app-workout-list",
+	templateUrl: "./workout-list.component.html",
+	styleUrls: ["./workout-list.component.scss"],
 })
 export class WorkoutListComponent implements OnInit, OnDestroy {
-  workouts$: Observable<Workouts[]>;
+	workouts$: Observable<Workout[]>;
+	title: string;
+	nextPath = "/exercises";
+	currentId: string;
+	currentWorkoutTypeSub: Subscription;
 
-  title: string;
-  nextPath = '/exercises'
-  currentId: string;
-  currentWorkoutType;
+	constructor(
+		private fetchDataService: FetchDataService,
+		private route: ActivatedRoute,
+		private userService: UserService
+	) {}
 
-  constructor(private fetchDataService: FetchDataService, private route: ActivatedRoute) { }
-  
-  ngOnInit(): void {
-    this.currentId = this.route.snapshot.paramMap.get('id');
-    this.workouts$ = this.fetchDataService.getWorkouts().pipe(
-      map(item => item.filter(item => item.workoutTypeId === this.currentId))
-    );
+	ngOnInit(): void {
+		this.currentId = this.route.snapshot.paramMap.get("id");
+		this.currentWorkoutTypeSub = this.fetchDataService.getWorkoutTypeById(this.currentId).subscribe(item => {
+			this.title = item.name;
+		});
 
-    this.currentWorkoutType = this.fetchDataService.getWorkoutTypeById(this.currentId)
-      .subscribe(item => {
-        this.title = item.name;
-    });
-  }
+		this.workouts$ = combineLatest([this.fetchDataService.getWorkouts(), this.userService.getCurrentUser()]).pipe(
+			map(([workout, user]) => {
+				let workoutsForWorkoutType = workout.filter(item => item.workoutTypeId === this.currentId);
 
-  ngOnDestroy(): void {
-      this.currentWorkoutType.unsubscribe();
-  }
+				return workoutsForWorkoutType.map(item => {
+					let userFazeCompletedInWorkout = user?.fazeCompletedInWorkout;
+					let userFazeCompleted: number;
+
+					if (userFazeCompletedInWorkout && userFazeCompletedInWorkout[item.id]) {
+						userFazeCompleted = userFazeCompletedInWorkout[item.id].length;
+					} else {
+						userFazeCompleted = 0;
+					}
+
+					return {
+						...item,
+						fazesCompleted: userFazeCompleted,
+					};
+				});
+			}),
+			tap(console.log)
+		);
+	}
+
+	ngOnDestroy(): void {
+		this.currentWorkoutTypeSub.unsubscribe();
+	}
 }

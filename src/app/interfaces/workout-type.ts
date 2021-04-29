@@ -1,5 +1,5 @@
 export interface WorkoutType {
-    id: string;
-    name: string;
-    workoutIds: number[];
+	id: string;
+	name: string;
+	workoutCount: number;
 }

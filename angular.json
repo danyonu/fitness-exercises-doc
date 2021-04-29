@@ -58,7 +58,7 @@
                 {
                   "type": "anyComponentStyle",
                   "maximumWarning": "6kb",
-                  "maximumError": "10kb"
+                  "maximumError": "20kb"
                 }
               ]
             }
@@ -123,6 +123,10 @@
               "devServerTarget": "fitness-exercises-doc:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }
