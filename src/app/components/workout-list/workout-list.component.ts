@@ -50,8 +50,7 @@ export class WorkoutListComponent implements OnInit, OnDestroy {
 						fazesCompleted: userFazeCompleted,
 					};
 				});
-			}),
-			tap(console.log)
+			})
 		);
 	}
 

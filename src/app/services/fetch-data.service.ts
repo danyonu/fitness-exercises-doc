@@ -2,9 +2,9 @@ import { Injectable } from "@angular/core";
 import { AngularFireDatabase } from "@angular/fire/database";
 import { combineLatest, Observable, of, throwError } from "rxjs";
 import { WorkoutFaze, WorkoutFazeWithExercises, Workout } from "../interfaces/workouts";
-import { Exercise } from "../interfaces/exercise";
+import { Exercise, ExerciseToAdd } from "../interfaces/exercise";
 import { WorkoutType } from "../interfaces/workout-type";
-import { map, mergeMap } from "rxjs/operators";
+import { map, mergeMap, take } from "rxjs/operators";
 import { User } from "../interfaces/user";
 import { UserService } from "./user.service";
 
@@ -42,6 +42,17 @@ export class FetchDataService {
 						...obj.payload.toJSON(),
 						id: obj.key,
 					} as WorkoutType;
+				})
+			);
+	}
+
+	getWorkoutTypeWorkoutCountById(id: string): Observable<number> {
+		return this.db
+			.object<WorkoutType>(`workoutType/${id}`)
+			.valueChanges()
+			.pipe(
+				map(obj => {
+					return obj.workoutCount;
 				})
 			);
 	}
@@ -89,10 +100,13 @@ export class FetchDataService {
 				map(arr => {
 					return arr
 						.map(item => {
+							const exerciseIds = item.payload.toJSON() as WorkoutFaze;
+
 							return {
 								...item.payload.toJSON(),
 								id: item.key,
 								workoutId: id,
+								exerciseIds: Object.values(exerciseIds.exerciseIds),
 							} as WorkoutFaze;
 						})
 						.sort((a: WorkoutFaze, b: WorkoutFaze) => {
@@ -205,5 +219,93 @@ export class FetchDataService {
 
 	updateRepsCount(userId: string, fazeId: string, count: number) {
 		this.db.object<number>(`users/${userId}/fazeCount/${fazeId}`).set(count);
+	}
+
+	//add
+	addWorkoutType(newWorkoutType: string) {
+		let newId = this.db.createPushId();
+		let objToSave = {
+			name: newWorkoutType,
+			workoutCount: 0,
+		};
+
+		this.db.object(`workoutType/${newId}`).set(objToSave);
+	}
+
+	addWorkout({ workoutName, workoutTypeId }) {
+		let newId = this.db.createPushId();
+		let objToSave = {
+			name: workoutName,
+			workoutFaze: [],
+			workoutTypeId: workoutTypeId,
+		};
+
+		this.db.object(`workouts/${newId}`).set(objToSave);
+
+		this.getWorkoutTypeWorkoutCountById(workoutTypeId)
+			.pipe(take(1))
+			.subscribe(currentWorkoutCount => {
+				this.db.object(`workoutType/${workoutTypeId}`).update({ workoutCount: ++currentWorkoutCount });
+			});
+	}
+
+	addExercise(data: ExerciseToAdd) {
+		let newFazeId = this.db.createPushId();
+		let newExerciseId = this.db.createPushId();
+		let isFazeAddNew = typeof data.faze === "string";
+		let isExerciseAddNew = typeof data.exercise === "string";
+
+		if (isFazeAddNew && isExerciseAddNew) {
+			this.addNewFaze(data, newExerciseId, newFazeId);
+			this.addNewExercise(data, newFazeId, newExerciseId);
+		} else if (isFazeAddNew && !isExerciseAddNew) {
+			this.addNewFaze(data, (<Exercise>data.exercise).id, newFazeId);
+			this.updateWorkFazeIdsOnExercise(data, newFazeId);
+		} else if (!isFazeAddNew && isExerciseAddNew) {
+			this.addNewExercise(data, (<WorkoutFaze>data.faze).id, newExerciseId);
+			this.updateExerciseIdsOnWorkoutFaze(data, newExerciseId);
+		} else if (!isFazeAddNew && !isExerciseAddNew) {
+			this.updateExerciseIdsOnWorkoutFaze(data, (<Exercise>data.exercise).id);
+			this.updateWorkFazeIdsOnExercise(data, (<WorkoutFaze>data.faze).id);
+		}
+	}
+
+	private updateWorkFazeIdsOnExercise(data: ExerciseToAdd, newFazeId: string) {
+		this.db
+			.object(`exercises/${(<Exercise>data.exercise).id}/workoutFazeIds`)
+			.update([...(<Exercise>data.exercise).workoutFazeIds, newFazeId]);
+	}
+
+	private addNewExercise(data: ExerciseToAdd, newFazeId: string, newExerciseId: string) {
+		let exerciseToSave = {
+			name: data.exercise,
+			reps: data.exerciseReps,
+			videoId: [this.getYouTubeIdFromUrl(data.exerciseVideoUrl)],
+			workoutFazeIds: [newFazeId],
+		};
+
+		this.db.object(`exercises/${newExerciseId}`).set(exerciseToSave);
+	}
+
+	private updateExerciseIdsOnWorkoutFaze(data: ExerciseToAdd, newExerciseId: string) {
+		this.db
+			.object(`workouts/${data.workoutId}/workoutFaze/${(<WorkoutFaze>data.faze).id}/exerciseIds`)
+			.update([...(<WorkoutFaze>data.faze).exerciseIds, newExerciseId]);
+	}
+
+	private addNewFaze(data: ExerciseToAdd, newExerciseId: string, newFazeId: string) {
+		let fazeToSave = {
+			name: data.faze,
+			reps: data.fazeReps,
+			exerciseIds: [newExerciseId],
+		};
+
+		this.db.object(`workouts/${data.workoutId}/workoutFaze/${newFazeId}`).set(fazeToSave);
+	}
+
+	private getYouTubeIdFromUrl(url: string): string {
+		let videoId = url.match(/(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/);
+
+		return videoId ? videoId[1] : "";
 	}
 }

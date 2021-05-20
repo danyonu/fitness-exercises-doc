@@ -19,5 +19,8 @@
 				<span class="user-name">{{ currentUser.name }}</span>
 			</div>
 		</div>
+		<button mat-mini-fab color="basic" class="header-add-button" (click)="addWorkout()" *ngIf="currentUser">
+			<mat-icon aria-hidden="false" aria-label="Back button">add</mat-icon>
+		</button>
 	</div>
 </div>

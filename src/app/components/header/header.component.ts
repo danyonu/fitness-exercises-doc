@@ -6,6 +6,8 @@ import { UserService } from "src/app/services/user.service";
 import { User } from "src/app/interfaces/user";
 import { Subscription } from "rxjs";
 import { LoginService } from "src/app/services/login.service";
+import { AddWorkoutComponent } from "../add-workout/add-workout.component";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
 	selector: "app-header",
@@ -19,16 +21,21 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
 	currentUser: User;
 	currentUserSub: Subscription;
+	currentPage: string;
+	currentId: string;
 
 	constructor(
 		private location: Location,
 		private dialog: MatDialog,
 		private userService: UserService,
-		private loginService: LoginService
+		private loginService: LoginService,
+		private route: ActivatedRoute
 	) {}
 
 	ngOnInit(): void {
 		this.currentUserSub = this.userService.getCurrentUser().subscribe(user => (this.currentUser = user));
+		this.currentPage = this.route.snapshot.url[0].path;
+		this.currentId = this.route.snapshot.paramMap.get("id");
 	}
 
 	ngOnDestroy(): void {
@@ -40,8 +47,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 	}
 
 	login() {
-		const dialogRef = this.dialog.open(LoginComponent, {
-			data: { name: "this is the name" },
+		this.dialog.open(LoginComponent, {
 			width: "95%",
 			maxWidth: "600px",
 		});
@@ -51,5 +57,12 @@ export class HeaderComponent implements OnInit, OnDestroy {
 		this.loginService.logout();
 	}
 
-	addWorkout() {}
+	addWorkout() {
+		this.dialog.open(AddWorkoutComponent, {
+			data: { currentPage: this.currentPage, currentId: this.currentId },
+			width: "95%",
+			maxWidth: "600px",
+			autoFocus: false,
+		});
+	}
 }

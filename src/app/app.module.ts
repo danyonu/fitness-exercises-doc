@@ -11,6 +11,8 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 import { MatSnackBarModule, MAT_SNACK_BAR_DEFAULT_OPTIONS } from "@angular/material/snack-bar";
+import { MatStepperModule } from "@angular/material/stepper";
+import { MatAutocompleteModule } from "@angular/material/autocomplete";
 
 import { RouterModule } from "@angular/router";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
@@ -30,7 +32,8 @@ import { ExerciseDetailsComponent } from "./components/exercise-details/exercise
 import { SanitizeUrlPipe } from "./pipes/sanitize-url.pipe";
 import { LoginComponent } from "./components/login/login.component";
 import { SpinnerComponent } from "./components/spinner/spinner.component";
-import { CounterButtonComponent } from './components/counter-button/counter-button.component';
+import { CounterButtonComponent } from "./components/counter-button/counter-button.component";
+import { AddWorkoutComponent } from "./components/add-workout/add-workout.component";
 
 @NgModule({
 	declarations: [
@@ -45,6 +48,7 @@ import { CounterButtonComponent } from './components/counter-button/counter-butt
 		LoginComponent,
 		SpinnerComponent,
 		CounterButtonComponent,
+		AddWorkoutComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -60,6 +64,8 @@ import { CounterButtonComponent } from './components/counter-button/counter-butt
 		MatInputModule,
 		MatProgressSpinnerModule,
 		MatSnackBarModule,
+		MatStepperModule,
+		MatAutocompleteModule,
 
 		RouterModule.forRoot(routes),
 		BrowserAnimationsModule,
