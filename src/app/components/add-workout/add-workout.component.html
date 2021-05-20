@@ -1,0 +1,76 @@
+<div class="form-container">
+	<form [formGroup]="workoutTypeFormGroup" *ngIf="dialogData.currentPage === 'workout-types'">
+		<mat-form-field>
+			<mat-label>Nume workout</mat-label>
+			<input matInput placeholder="" formControlName="workoutTypeName" required />
+		</mat-form-field>
+	</form>
+	<form [formGroup]="workoutFormGroup" *ngIf="dialogData.currentPage === 'workouts'">
+		<mat-form-field>
+			<mat-label>Nume antrenament</mat-label>
+			<input matInput placeholder="" formControlName="workoutName" required />
+		</mat-form-field>
+	</form>
+	<form [formGroup]="exerciseFormGroup" *ngIf="dialogData.currentPage === 'exercises'">
+		<div class="fazes-container" *ngIf="filteredFazes | async as fazes">
+			<mat-form-field class="example-full-width">
+				<mat-label>Seria</mat-label>
+				<input
+					type="text"
+					placeholder="Alege una din serii sau adauga una nou"
+					aria-label="Alege una din serii sau adauga una nou"
+					matInput
+					required
+					formControlName="faze"
+					[matAutocomplete]="auto"
+				/>
+				<mat-autocomplete #auto="matAutocomplete" [displayWith]="displayAs">
+					<mat-option *ngFor="let faze of fazes" [value]="faze">
+						{{ faze.name }}
+					</mat-option>
+				</mat-autocomplete>
+			</mat-form-field>
+			<mat-form-field *ngIf="!fazes.length">
+				<mat-label>Repetari serie</mat-label>
+				<input type="number" matInput placeholder="" formControlName="fazeReps" />
+			</mat-form-field>
+		</div>
+
+		<div class="exercises-container" *ngIf="filteredExercises | async as exercises">
+			<mat-form-field class="example-full-width">
+				<mat-label>Exercitiu</mat-label>
+				<input
+					type="text"
+					placeholder="Alege un exercitiu"
+					aria-label="Alege un exercitiu"
+					matInput
+					required
+					formControlName="exercise"
+					[matAutocomplete]="auto"
+				/>
+				<mat-autocomplete #auto="matAutocomplete" [displayWith]="displayAs">
+					<mat-option *ngFor="let exercise of exercises" [value]="exercise">
+						{{ exercise.name }} ({{ exercise.reps }} reps)
+					</mat-option>
+				</mat-autocomplete>
+			</mat-form-field>
+			<mat-form-field *ngIf="!exercises.length">
+				<mat-label>Repetari exercitiu</mat-label>
+				<input type="number" matInput placeholder="" formControlName="exerciseReps" />
+			</mat-form-field>
+			<mat-form-field *ngIf="!exercises.length">
+				<mat-label>Video url</mat-label>
+				<input matInput placeholder="" formControlName="exerciseVideoUrl" />
+			</mat-form-field>
+		</div>
+	</form>
+	<button
+		class="save-btn"
+		mat-raised-button
+		color="primary"
+		(click)="onSave()"
+		[disabled]="!(workoutTypeFormGroup.valid || workoutFormGroup.valid || exerciseFormGroup.valid)"
+	>
+		Save
+	</button>
+</div>

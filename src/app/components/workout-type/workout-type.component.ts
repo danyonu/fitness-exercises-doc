@@ -18,7 +18,6 @@ export class WorkoutTypeComponent implements OnInit, OnDestroy {
 	title = "Workout Types";
 	workoutsCompleted: Observable<number>;
 	currentUser: User;
-	currentUserSub: Subscription;
 
 	constructor(private fetchDataService: FetchDataService, private userService: UserService) {}
 
@@ -28,6 +27,8 @@ export class WorkoutTypeComponent implements OnInit, OnDestroy {
 			this.userService.getCurrentUser(),
 		]).pipe(
 			map(([workoutTypes, user]) => {
+				this.currentUser = user;
+
 				return workoutTypes.map(item => {
 					let userWorkoutCompletedInWorkoutType = user?.workoutCompletedInWorkoutType;
 					let userWorkoutsCompleted: number;
@@ -45,10 +46,7 @@ export class WorkoutTypeComponent implements OnInit, OnDestroy {
 				});
 			})
 		);
-		this.currentUserSub = this.userService.getCurrentUser().subscribe(user => (this.currentUser = user));
 	}
 
-	ngOnDestroy(): void {
-		this.currentUserSub.unsubscribe();
-	}
+	ngOnDestroy(): void {}
 }

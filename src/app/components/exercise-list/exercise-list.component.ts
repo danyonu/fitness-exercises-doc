@@ -1,5 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, TemplateRef, ViewChild } from "@angular/core";
-import { MatButton } from "@angular/material/button";
+import { Component, OnDestroy, OnInit } from "@angular/core";
 import { MatDialog } from "@angular/material/dialog";
 import { ActivatedRoute } from "@angular/router";
 import { Observable, Subscription } from "rxjs";
@@ -99,7 +98,6 @@ export class ExerciseListComponent implements OnInit, OnDestroy {
 
 		if (faze.reps == ++userFazeCount) {
 			this.updateWorkoutsCompleteState(faze);
-			// this.updateWorkoutTypeCompleteState(faze);
 		}
 
 		this.fetchDataService.updateRepsCount(this.currentUser.id, faze.id, userFazeCount);
