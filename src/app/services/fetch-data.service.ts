@@ -270,12 +270,6 @@ export class FetchDataService {
 		}
 	}
 
-	private updateWorkFazeIdsOnExercise(data: ExerciseToAdd, newFazeId: string) {
-		this.db
-			.object(`exercises/${(<Exercise>data.exercise).id}/workoutFazeIds`)
-			.update([...(<Exercise>data.exercise).workoutFazeIds, newFazeId]);
-	}
-
 	private addNewExercise(data: ExerciseToAdd, newFazeId: string, newExerciseId: string) {
 		let exerciseToSave = {
 			name: data.exercise,
@@ -287,12 +281,6 @@ export class FetchDataService {
 		this.db.object(`exercises/${newExerciseId}`).set(exerciseToSave);
 	}
 
-	private updateExerciseIdsOnWorkoutFaze(data: ExerciseToAdd, newExerciseId: string) {
-		this.db
-			.object(`workouts/${data.workoutId}/workoutFaze/${(<WorkoutFaze>data.faze).id}/exerciseIds`)
-			.update([...(<WorkoutFaze>data.faze).exerciseIds, newExerciseId]);
-	}
-
 	private addNewFaze(data: ExerciseToAdd, newExerciseId: string, newFazeId: string) {
 		let fazeToSave = {
 			name: data.faze,
@@ -301,6 +289,26 @@ export class FetchDataService {
 		};
 
 		this.db.object(`workouts/${data.workoutId}/workoutFaze/${newFazeId}`).set(fazeToSave);
+	}
+
+	private updateWorkFazeIdsOnExercise(data: ExerciseToAdd, fazeId: string) {
+		let exerciseId = (<Exercise>data.exercise).id;
+		let exerciseWorkoutFazeIds = (<Exercise>data.exercise).workoutFazeIds;
+
+		if (exerciseWorkoutFazeIds.indexOf(fazeId) === -1) {
+			this.db.object(`exercises/${exerciseId}/workoutFazeIds`).update([...exerciseWorkoutFazeIds, fazeId]);
+		}
+	}
+
+	private updateExerciseIdsOnWorkoutFaze(data: ExerciseToAdd, exerciseId: string) {
+		let workoutFazeExerciseIds = (<WorkoutFaze>data.faze).exerciseIds;
+		let workoutFazeId = (<WorkoutFaze>data.faze).id;
+
+		if (workoutFazeExerciseIds.indexOf(exerciseId) === -1) {
+			this.db
+				.object(`workouts/${data.workoutId}/workoutFaze/${workoutFazeId}/exerciseIds`)
+				.update([...workoutFazeExerciseIds, exerciseId]);
+		}
 	}
 
 	private getYouTubeIdFromUrl(url: string): string {
